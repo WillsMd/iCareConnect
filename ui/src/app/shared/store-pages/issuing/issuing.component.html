@@ -39,7 +39,7 @@
       </mat-form-field>
     </div>
 
-    <!-- <div style="height: 60vh; overflow: auto">
+    <div style="height: 60vh; overflow: auto">
       <table class="table">
         <tr>
           <td>#</td>
@@ -47,9 +47,9 @@
           <td>Quantity Requested</td>
           <td>Quantity Issued</td>
           <td>Requesting Store</td>
-          <td>Status</td> -->
-    <!-- <td>Requester's Status</td> -->
-    <!-- <td>Requested Date</td>
+          <td>Status</td> 
+    <td>Requester's Status</td>
+     <td>Requested Date</td>
           <td>Actions</td>
         </tr>
 
@@ -75,11 +75,11 @@
           <td>{{ issue?.requestingLocation?.name }}</td>
           <td>
             <span class="text-warning">{{ issue?.status }}</span>
-          </td> -->
-    <!-- <td>
+          </td> 
+    <td>
             <div class="text-warning">Waiting</div>
-          </td> -->
-    <!-- <td>
+          </td>
+    <td>
             {{ issue?.requestDate | date: "medium" }}
           </td>
           <td>
@@ -136,7 +136,7 @@
           </td>
         </tr>
       </table>
-    </div> -->
+    </div>
     <div *ngIf="!params?.issuingList?.length && loadingIssues">
       <mat-progress-bar mode="indeterminate"></mat-progress-bar>
     </div>
@@ -231,7 +231,7 @@
                     >visibility</mat-icon
                   >
                 </a>
-                <!--
+                
                   <ng-container *ngIf="issue?.requisitionStatuses[issue?.requisitionStatuses?.length - 1]?.status === 'PENDING'">
                        <a 
                       class="anchor-button ml-4" 
@@ -248,7 +248,7 @@
                           <mat-icon>clear</mat-icon>
                       </a>
                     
-                  </ng-container> -->
+                  </ng-container>
               </div>
             </div>
           </div>
@@ -287,7 +287,7 @@
       </mat-accordion>
     </ng-container>
 
-    <!-- <div *ngIf="params?.issuingList?.length && currentLocation">
+    <div *ngIf="params?.issuingList?.length && currentLocation">
       <app-issuing-stock-by-store
         [issuingStock]="params?.issuingList"
         [currentStore]="currentLocation"
@@ -296,7 +296,7 @@
         (selectionChange)="getSelection($event)"
       >
       </app-issuing-stock-by-store>
-    </div> -->
+    </div>
     <div
       *ngIf="!params?.issuingList?.length && currentLocation && !loadingIssues"
     >
@@ -308,7 +308,7 @@
         </tbody>
       </table>
     </div>
-    <!-- 
+    
     <div class="d-flex justify-content-end mt-2 mr-2">
       <button
         color="primary"
@@ -318,6 +318,6 @@
       >
         Issue selected items
       </button>
-    </div> -->
+    </div>
   </mat-card>
 </div>
